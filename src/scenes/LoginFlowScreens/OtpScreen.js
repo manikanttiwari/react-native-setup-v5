@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
         height: scaleSize(60),
         borderRadius: 10,
         backgroundColor: Colors.PRIMARY,
-        ...Mixins.boxShadow("black", 20),
+        ...Mixins.boxShadow("black", 5),
         width: "13%",
         marginTop: scaleSize(30),
         letterSpacing: scaleSize(10),
