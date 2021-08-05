@@ -1,14 +1,20 @@
 import * as React from 'react';
-import { View, Text, Image } from "react-native"
+import { View, Text, Image, StatusBar , StyleSheet, TouchableOpacity} from "react-native"
 
-const HEADER_HEIGHT = 80;
-import {Colors} from '../styles/index'
+const HEADER_HEIGHT = 90;
+import {Colors, Spacing, Mixins} from '../styles/index'
+import { scaleSize } from '../styles/mixins';
 
-const CommonHeader = (props)=>{
-    return (
-        <View style={{height: HEADER_HEIGHT, backgroundColor:Colors.PRIMARY}}>
-            <Text>Hello</Text>
-            </View>
-    ) 
+const LeftHeader = (props)=>{
+    return <TouchableOpacity style={styles.container} onPress={props.onPress} > 
+            <Text style={styles.textStyle}>Back</Text>
+    </TouchableOpacity>
 }
-export default CommonHeader;
+const styles = StyleSheet.create({
+    container: {marginLeft:scaleSize(10),  height: scaleSize(40), width:scaleSize(40), borderRadius:Mixins.scaleSize(20), backgroundColor:Colors.PRIMARY, justifyContent: "center", alignItems:"center", ...Mixins.boxShadow("white", 4)},
+    buttonsContainer: {
+      padding: scaleSize(10)
+    },
+    textStyle: {color: Colors.SECONDARY }
+  });
+export { LeftHeader };

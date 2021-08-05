@@ -18,6 +18,7 @@ import AuthNavigator from './AuthNavigator';
 // export default RootNavigator;
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 const Stack = createStackNavigator();
 const AuthContext = React.createContext();
 export default function App({ navigation }) {
