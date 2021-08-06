@@ -22,8 +22,8 @@ const OtpScreen = (props)=>{
         if(type === 6){
             texts[`ref_${type}`] = text
             setTexts(texts)
-            // props.navigation.navigate
-            refs[`ref_1`].focus()
+            props.navigation.navigate("UploadDocScreen")
+            // refs[`ref_1`].focus()
             return;
         }
         refs[`ref_${type+1}`].focus()
@@ -59,7 +59,7 @@ const OtpScreen = (props)=>{
                     dataDetectorTypes="phoneNumber"
                     keyboardAppearance="dark"
                     keyboardType="numeric"
-                    maxLength={10}
+                    maxLength={1}
                     textContentType={"telephoneNumber"}
                 />
                 <TextInput
@@ -72,7 +72,7 @@ const OtpScreen = (props)=>{
                     dataDetectorTypes="phoneNumber"
                     keyboardAppearance="dark"
                     keyboardType="numeric"
-                    maxLength={10}
+                    maxLength={1}
                     textContentType={"telephoneNumber"}
                 />
                 <TextInput
@@ -85,7 +85,7 @@ const OtpScreen = (props)=>{
                     dataDetectorTypes="phoneNumber"
                     keyboardAppearance="dark"
                     keyboardType="numeric"
-                    maxLength={10}
+                    maxLength={1}
                     textContentType={"telephoneNumber"}
                 />
                 <TextInput
@@ -98,7 +98,7 @@ const OtpScreen = (props)=>{
                     dataDetectorTypes="phoneNumber"
                     keyboardAppearance="dark"
                     keyboardType="numeric"
-                    maxLength={10}
+                    maxLength={1}
                     textContentType={"telephoneNumber"}
                 />
                 <TextInput
@@ -111,7 +111,7 @@ const OtpScreen = (props)=>{
                     dataDetectorTypes="phoneNumber"
                     keyboardAppearance="dark"
                     keyboardType="numeric"
-                    maxLength={10}
+                    maxLength={1}
                     textContentType={"telephoneNumber"}
                 />
             </View>
@@ -143,8 +143,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         height: scaleSize(60),
         borderRadius: 10,
-        backgroundColor: Colors.PRIMARY,
-        ...Mixins.boxShadow("black", 5),
+        ...Mixins.insetShadow("#7d7d7d", 2),
         width: "13%",
         marginTop: scaleSize(30),
         letterSpacing: scaleSize(10),

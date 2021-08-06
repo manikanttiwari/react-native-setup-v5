@@ -26,12 +26,25 @@ export function padding(top, right, bottom, left){
   return dimensions(top, right, bottom, left, 'padding');
 }
 
-export function boxShadow(color, radius = 8,opacity = 0.5, offset = {height:2,width:2}){
+export function boxShadow(color, radius = 8,opacity = 0.5, offset = {height:-2,width:0}){
   return {
     shadowColor: color,
     shadowOffset: offset,
     shadowOpacity: opacity,
     shadowRadius: radius,
+    elevation: radius,
+  };
+}
+export function insetShadow(color, radius = 8,opacity = 0.5, offset = {height:-4,width:2}){
+  return {
+    backgroundColor: 'transparent',
+    borderColor: color,
+    borderWidth: 0.5,
+    overflow: 'hidden',
+    shadowColor: color,
+    shadowRadius: radius,
+    shadowOpacity: opacity,
+    shadowOffset: offset,
     elevation: radius,
   };
 }

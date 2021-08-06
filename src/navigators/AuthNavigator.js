@@ -5,6 +5,7 @@ import { LeftHeader } from '../components/CommonHeader'
 // import IntroScreen from '../scenes/LoginFlowScreens/IntroScreen'
 import EnterMobileScreen from '../scenes/LoginFlowScreens/MobileScreen'
 import EnterOtpScreen from '../scenes/LoginFlowScreens/OtpScreen'
+import UploadDocScreen from '../scenes/UploadDocScreen/UploadDocScreen'
 import {Colors, Mixins, Spacing} from '../styles/index'
 
 const Stack = createStackNavigator();
@@ -24,6 +25,18 @@ const AuthNavigator = () => {
                     })}
                 />
                 <Stack.Screen name={"EnterOtpScreen"} component={EnterOtpScreen} options={({ navigation }) => ({
+                        title: '',
+                        headerLeft: () => <LeftHeader onPress={()=>navigation.goBack()}/>,
+                        headerStyle: {
+                            backgroundColor: Colors.PRIMARY,
+                            height: Mixins.scaleSize(100),
+                            elevation: 0,
+                            shadowOpacity: 0,
+                            borderBottomWidth: 0,
+                        },
+                    })}
+                />
+                <Stack.Screen name={"UploadDocScreen"} component={UploadDocScreen} options={({ navigation }) => ({
                         title: '',
                         headerLeft: () => <LeftHeader onPress={()=>navigation.goBack()}/>,
                         headerStyle: {
