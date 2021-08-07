@@ -48,7 +48,7 @@ const IntroScreen = (props)=>{
                 </View>
                 <Text style={{...styles.discTxt, color:Colors.SECONDARY}}>X</Text>
             </View>
-            <TouchableOpacity onPress={toggleUpload}>
+            <TouchableOpacity onPress={()=>props.navigation.navigate('BottomTabNavigator', {screen: "HomeTabNavigator"})}>
                 <View style={styles.uploadBtn}>
                     <Text style={{...styles.discTxt, color:Colors.SECONDARY}}>Next</Text>
                 </View>

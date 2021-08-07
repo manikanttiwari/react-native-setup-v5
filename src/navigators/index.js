@@ -2,6 +2,7 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import AuthNavigator from './AuthNavigator';
+// import BottomTabNavigator from './BottomTabNavigator';
 
 // import AuthLoadingScreen from '../scenes/AuthLoadingScreen';
 
@@ -46,7 +47,7 @@ export default function App({ navigation }) {
         }
       },
       {
-        isLoading: false,
+        isLoading: true,
         isSignout: false,
         userToken: null,
       }

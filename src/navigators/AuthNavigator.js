@@ -7,6 +7,7 @@ import EnterMobileScreen from '../scenes/LoginFlowScreens/MobileScreen'
 import EnterOtpScreen from '../scenes/LoginFlowScreens/OtpScreen'
 import UploadDocScreen from '../scenes/UploadDocScreen/UploadDocScreen'
 import {Colors, Mixins, Spacing} from '../styles/index'
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createStackNavigator();
 const AuthNavigator = () => {
@@ -47,6 +48,11 @@ const AuthNavigator = () => {
                             borderBottomWidth: 0,
                         },
                     })}
+                />
+
+                <Stack.Screen name={"BottomTabNavigator"} component={BottomTabNavigator} options={{
+                                        headerShown: false
+                                    }}
                 />
         </Stack.Navigator>
     );
